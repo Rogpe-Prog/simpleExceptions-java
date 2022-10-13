@@ -1,5 +1,6 @@
 package application;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import model.entities.Account;
@@ -32,6 +33,9 @@ public class Program {
 		}
 		catch(DomainException e) {
 			System.out.println(e.getMessage());
+		}
+		catch(InputMismatchException e) {
+			System.out.println("Error: invalid data!");
 		}
 		
 
